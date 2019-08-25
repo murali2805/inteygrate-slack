@@ -15,7 +15,7 @@ exports.execute = (req, res) => {
     let slackUserId = req.body.user_id,
         oauthObj = auth.getOAuthObject(slackUserId),
         limit = req.body.text,
-        q = "SELECT Id, Name, Amount, Expected_Visitor_Count__c, Probability, StageName, CloseDate FROM Opportunity where isClosed=false ORDER BY Expected_Visitor_Count__c DESC LIMIT " + limit;
+        q = "SELECT Id, Name, Amount, Expected_Visitor_Count__c,Description__c, Probability, StageName, CloseDate FROM Opportunity where isClosed=false ORDER BY Expected_Visitor_Count__c DESC LIMIT " + limit;
 
     if (!limit || limit=="") limit = 5;
 
@@ -38,6 +38,7 @@ exports.execute = (req, res) => {
                         short: true
                     });
                     fields.push({title: "Probability", value: opportunity.Probability + "%", short: true});
+                    fields.push({title: "Article title", value: opportunity.Description__c + "%", short: true});
                     fields.push({title: "Open in Salesforce:", value: oauthObj.instance_url + "/" + opportunity.Id, short:false});
                     attachments.push({
                         color: "#FCB95B",
