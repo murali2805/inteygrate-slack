@@ -38,7 +38,7 @@ exports.execute = (req, res) => {
                         short: true
                     });
                     fields.push({title: "Probability", value: opportunity.Probability + "%", short: true});
-                    fields.push({title: "Article title", value: opportunity.Description__c + "%", short: true});
+                    fields.push({title: "Planned Article", value: opportunity.Description__c + "%", short: true});
                     fields.push({title: "Open in Salesforce:", value: oauthObj.instance_url + "/" + opportunity.Id, short:false});
                     attachments.push({
                         color: "#FCB95B",
