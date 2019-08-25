@@ -28,7 +28,7 @@ exports.execute = (req, res) => {
                     let fields = [];
                     fields.push({title: "Opportunity", value: opportunity.Name, short: true});
                     //fields.push({title: "Stage", value: opportunity.StageName, short: true});
-                    fields.push({title: "Planned Articles", value: opportunity.Planned_Article__c, short: true});
+                    fields.push({title: "Planned Article", value: opportunity.Planned_Article__c, short: true});
                     fields.push({title: "Expected Visitor Count", value: opportunity.Expected_Visitor_Count__c, short: true});
                     fields.push({
                         title: "Amount",
