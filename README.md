@@ -2,9 +2,9 @@
 
 A simple Node.js application that acts as a Slash Command message broker between Slack and Salesforce.
 
-Watch [this video](https://youtu.be/xB-1SsUoBHk) to see the application in action.
+Watch [this video](https://www.youtube.com/watch?v=U9JDG51G2MM) to see the application in action.
  
-Read [this blog post](http://coenraets.org/blog/2016/01/slack-salesforce-integration-part-2/) for more details. 
+Read [this blog post](https://inteygrate.com/improve-your-sales-performance-with-slack-and-salesforce-integration/) for more details. 
 
 Follow the instructions below to deploy your own instance of the application:
 
